@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-color: navy;
+      }
+      p {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      First input: <input type="text" id="input1"><br>
+      Second input: <input type="text" id="input2"><br>
+      <input type="button" onclick="sum()" value="Calculate sum">
+    </form>
+    <p id="output"></p>
+    <script>
+      function sum() {
+        // get the two input values
+        var input1 = document.getElementById("input1").value;
+        var input2 = document.getElementById("input2").value;
+        
+        // convert them to numbers
+        var num1 = parseFloat(input1);
+        var num2 = parseFloat(input2);
+        
+        // calculate the sum
+        var sum = num1 + num2;
+        
+        // display the result
+        document.getElementById("output").innerHTML = "The sum is: " + sum;
+      }
+    </script>
+  </body>
+</html>
